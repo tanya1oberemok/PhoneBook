@@ -1,3 +1,4 @@
 module.exports = {
-    DB: 'mongodb://localhost:27017/ngphoheBook'
+    url: 'mongodb://localhost:27017/phoheBook',
+    serverport: 3000 
  };

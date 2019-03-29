@@ -13,14 +13,14 @@ export class ContactService {
   baseUrl: string = "http://localhost:4200/"
 
   getAllContacts() {
-    return this.http.get<ContactModel[]>(this.baseUrl + 'Contacts')
+    return this.http.get<ContactModel[]>(this.baseUrl + 'contacts')
   }
 
   getContactById(id: string) {
-    return this.http.get<ContactModel>(this.baseUrl + 'Contacts' + '/' +id);
+    return this.http.get<ContactModel>(this.baseUrl + 'contacts' + '/' +id);
   }
 
   addContact(contact: ContactModel){
-    return this.http.post(this.baseUrl + 'Contact', contact);
+    return this.http.post(this.baseUrl + 'contact', contact);
   }
 }
