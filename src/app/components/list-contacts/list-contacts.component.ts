@@ -30,4 +30,17 @@ export class ListContactsComponent implements OnInit {
   addContact(): void {
     this.router.navigate([''])
   }
+
+  deleteContact(contact: ContactModel) {
+    this.contactService.deleteContact(contact.id).subscribe(data => {
+      console.log(data);
+      this.getAllContacts();
+    })
+  }
+
+  updateContact(contact: ContactModel) {
+    localStorage.removeItem("contactId")
+    localStorage.setItem("contactId", contact.id)
+    this.router.navigate(['update-contact'])
+  }
 }

@@ -12,8 +12,8 @@
                     <p class="card-text">{{contact.phoneNumber}}</p>
                     <p class="card-text">{{contact.email}}</p>
                     <p class="card-text">{{contact.company}}</p>
-                    <button type="button" class="btn btn-outline-info">Update</button>
-                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                    <button type="button" (click)="updateProduct(product)" class="btn btn-outline-info">Update</button>
+                    <button type="button" (click)="deleteProduct(product)" class="btn btn-outline-danger">Delete</button>
                   </div>
                 </div>
               </div>

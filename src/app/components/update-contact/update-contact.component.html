@@ -1,9 +1,9 @@
 
-<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
   <div class="form-row">
   <div class="form-group col-md-3" >
     <label for="exampleInputEmail1">First name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter first name" formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter first name" formControlName="firstName"  [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
     <div *ngIf="submitted && f.firstName.errors">
       <div *ngIf="f.firstName.errors.required">First name is required</div>
     </div>
@@ -45,7 +45,7 @@
     <label for="exampleFormControlFile1">Example file input</label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1">
   </div>
-  <button type="submit" class="btn btn-outline-primary btn-sm" >Add contact</button>
+  <button type="submit" class="btn btn-outline-primary btn-sm">Update contact</button>
 </div>
 </form>
 

@@ -21,6 +21,14 @@ export class ContactService {
   }
 
   addContact(contact: ContactModel){
-    return this.http.post(this.baseUrl + 'contact', contact);
+    return this.http.post(this.baseUrl + 'contacts', contact);
+  }
+
+  deleteContact(id: string) {
+    return this.http.delete(this.baseUrl + 'contacts' + '/' + id);
+  }
+
+  updateContact(contact: ContactModel) {
+    return this.http.put(this.baseUrl + 'contacts' + '/' + contact.id, contact);
   }
 }
