@@ -1,4 +1,4 @@
-const Contact = require('../models/contacts');
+const Contact = require('./models/contacts');
 
 //Create new Contact
 exports.create = (req, res) => {

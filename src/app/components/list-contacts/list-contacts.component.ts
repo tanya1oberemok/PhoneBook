@@ -27,10 +27,6 @@ export class ListContactsComponent implements OnInit {
     })
   }
 
-  addContact(): void {
-    this.router.navigate([''])
-  }
-
   deleteContact(contact: ContactModel) {
     this.contactService.deleteContact(contact.id).subscribe(data => {
       console.log(data);
